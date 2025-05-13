@@ -3,14 +3,14 @@ import React from "react";
 export default function Header() {
   return (
     <header className="w-full bg-white border-b border-gray-200">
-      <div className="flex flex-row items-center justify-between max-w-7xl mx-auto w-full px-8 py-4">
+      <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto w-full px-4 md:px-8 py-2 md:py-4 gap-4 md:gap-0">
         {/* Logo Section */}
-        <div className="flex items-center">
+        <div className="flex items-center mb-2 md:mb-0">
           {/* Placeholder for SVG Logo */}
-          <div className="w-16 h-12 flex items-center justify-center bg-gray-100 rounded">
+          <div className="flex items-center justify-center bg-gray-100 rounded">
             <svg
-              width="99"
-              height="66"
+              width="100"
+              height="70"
               viewBox="0 0 99 66"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -32,9 +32,9 @@ export default function Header() {
           </div>
         </div>
         {/* Right Side: Nav Links and Social Icons */}
-        <div className="flex flex-row items-center gap-8">
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full md:w-auto">
           {/* Navigation Links */}
-          <nav className="flex flex-row gap-6 text-lg font-medium">
+          <nav className="flex flex-col md:flex-row gap-2 md:gap-6 text-base md:text-lg font-medium w-full md:w-auto items-center">
             <a href="#" className="hover:text-blue-600 transition">
               Home
             </a>
@@ -44,53 +44,13 @@ export default function Header() {
             <a href="#" className="hover:text-blue-600 transition">
               Podcast
             </a>
-            <a href="#" className="hover:text-blue-600 transition">
-              Sign Up
+            <a
+              href="https://plus.briantylercohen.com/subscribe"
+              className="hover:text-blue-600 transition"
+            >
+              Substack
             </a>
           </nav>
-          {/* Social Media Icons */}
-          <div className="flex flex-row gap-4">
-            {/* Placeholder SVGs for social icons */}
-            <a href="#" aria-label="Twitter">
-              <svg
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36a9.09 9.09 0 01-2.88 1.1A4.52 4.52 0 0016.11 0c-2.5 0-4.52 2.02-4.52 4.52 0 .35.04.7.11 1.03C7.69 5.4 4.07 3.7 1.64 1.15c-.38.65-.6 1.4-.6 2.2 0 1.52.77 2.86 1.94 3.65A4.48 4.48 0 01.96 6v.06c0 2.13 1.52 3.91 3.54 4.31-.37.1-.76.16-1.16.16-.28 0-.55-.03-.81-.08.55 1.72 2.16 2.97 4.07 3A9.05 9.05 0 010 19.54a12.8 12.8 0 006.92 2.03c8.3 0 12.85-6.88 12.85-12.85 0-.2 0-.39-.01-.58A9.22 9.22 0 0023 3z" />
-              </svg>
-            </a>
-            <a href="#" aria-label="YouTube">
-              <svg
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <rect x="2" y="7" width="20" height="10" rx="2" />
-                <polygon points="10 9 15 12 10 15 10 9" />
-              </svg>
-            </a>
-            <a href="#" aria-label="Instagram">
-              <svg
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <rect x="2" y="2" width="20" height="20" rx="5" />
-                <circle cx="12" cy="12" r="3.5" />
-                <circle cx="17.5" cy="6.5" r="1.5" />
-              </svg>
-            </a>
-          </div>
         </div>
       </div>
     </header>

@@ -1,47 +1,61 @@
+import Image from "next/image";
+
 export default function Shop() {
   return (
     <div className="m-auto pt-[75px]">
-      <div className="grid grid-cols-3 grid-rows-2 gap-4">
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
-          <img
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4">
+        <div className="bg-gray-100 p-2 sm:p-4 rounded-lg flex items-center justify-center">
+          <Image
             src="/shop1.png"
-            className="w-[400px] rounded-[25px]"
+            className="w-full max-w-xs rounded-[25px] mx-auto"
             alt="Brian Tyler Cohen"
+            width={400}
+            height={400}
           />
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
-          <img
+        <div className="bg-gray-100 p-2 sm:p-4 rounded-lg flex items-center justify-center">
+          <Image
             src="/shop2.png"
-            className="w-[400px] rounded-[25px]"
+            className="w-full max-w-xs rounded-[25px] mx-auto"
             alt="Brian Tyler Cohen"
+            width={400}
+            height={400}
           />
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
-          <img
+        <div className="bg-gray-100 p-2 sm:p-4 rounded-lg flex items-center justify-center">
+          <Image
             src="/shop3.png"
-            className="w-[400px] rounded-[25px]"
+            className="w-full max-w-xs rounded-[25px] mx-auto"
             alt="Brian Tyler Cohen"
+            width={400}
+            height={400}
           />
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
-          <img
+        <div className="bg-gray-100 p-2 sm:p-4 rounded-lg flex items-center justify-center">
+          <Image
             src="/shop1.png"
-            className="w-[400px] rounded-[25px]"
+            className="w-full max-w-xs rounded-[25px] mx-auto"
             alt="Brian Tyler Cohen"
+            width={400}
+            height={400}
           />
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
-          <img
+        <div className="bg-gray-100 p-2 sm:p-4 rounded-lg flex items-center justify-center">
+          <Image
             src="/shop2.png"
-            className="w-[400px] rounded-[25px]"
+            className="w-full max-w-xs rounded-[25px] mx-auto"
             alt="Brian Tyler Cohen"
+            width={400}
+            height={400}
           />
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
-          <img
+        <div className="bg-gray-100 p-2 sm:p-4 rounded-lg flex items-center justify-center">
+          <Image
             src="/shop3.png"
-            className="w-[400px] rounded-[25px]"
+            className="w-full max-w-xs rounded-[25px] mx-auto"
             alt="Brian Tyler Cohen"
+            width={400}
+            height={400}
           />
         </div>
       </div>

@@ -1,10 +1,9 @@
 export default function Hero() {
   return (
     <div className="flex flex-col">
-      <div className="m-auto pt-[100px]">
+      <div className="m-auto pt-[100px] w-full flex justify-center">
         <iframe
-          width="560"
-          height="315"
+          className="w-full max-w-xs aspect-video md:w-[560px] md:h-[315px]"
           src="https://www.youtube.com/embed/rQ5_WhB27Ic?si=6uesbyIe6tWUcQSO&amp;controls=0"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"

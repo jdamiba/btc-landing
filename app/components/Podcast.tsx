@@ -1,53 +1,83 @@
+import Image from "next/image";
+import SpotifyLogo from "./icons/SpotifyLogo";
+import AppleMusicLogo from "./icons/AppleMusicLogo";
+// import YouTubeLogo from "./icons/YouTubeLogo";
+
 export default function Podcast() {
   return (
-    <div className="flex flex-row m-auto px-[125px]">
-      <img
-        src="/nolie.png"
-        alt="Brian Tyler Cohen"
-        className=" max-w-[600px] rounded-[25px]"
-      />
-      <div className="flex flex-col">
-        <div className="p-[40px]">
-          <p className="text-uppercase">
-            <b>Trump gets news he’s DREADED as support EVAPORATES</b>
-          </p>
-          <p>
-            The big debate: are Democrats taking the bait by fighting the
-            illegal deportation of migrants to El Salvador...{" "}
-          </p>
-          <p>1 hr 7 min</p>
-        </div>
-        <div className="p-[40px]">
-          <p>Trump gets news he’s DREADED as support EVAPORATES</p>
-          <p>
-            The big debate: are Democrats taking the bait by fighting the
-            illegal deportation of migrants to El Salvador...{" "}
-          </p>
-          <p>1 hr 7 min</p>
-        </div>
-        <div className="p-[40px]">
-          <p>Trump gets news he’s DREADED as support EVAPORATES</p>
-          <p>
-            The big debate: are Democrats taking the bait by fighting the
-            illegal deportation of migrants to El Salvador...{" "}
-          </p>
-          <p>1 hr 7 min</p>
-          <div className="flex flex-row mt-[55px] text-[#888] m-auto ml-0">
-            <p className="text-[40px] font-[700]">VIEW ALL</p>
-            <svg
-              width="35"
-              height="35"
-              viewBox="0 0 34 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="pl-[10px] m-auto ml-0"
-            >
-              <path
-                d="M0.566727 13.6086C0.566727 13.1265 0.957838 12.7359 1.43991 12.7365L29.1127 12.7705C29.594 12.7711 29.9838 13.1614 29.9838 13.6426L29.9838 17.328C29.9838 17.8093 29.5939 18.1996 29.1127 18.2001L1.43991 18.2342C0.957838 18.2348 0.566728 17.8441 0.566728 17.3621L0.566727 13.6086ZM16.1278 27.5782C15.7541 27.2408 15.7429 26.6581 16.1033 26.3066L26.5576 16.1096C26.9085 15.7674 26.9085 15.2033 26.5576 14.861L16.0965 4.65749C15.7387 4.30844 15.7469 3.73063 16.1145 3.39187L18.5131 1.18137C18.8571 0.864341 19.39 0.875211 19.7208 1.20601L33.3487 14.834C33.6887 15.174 33.6894 15.725 33.3502 16.0658L19.751 29.7316C19.4228 30.0614 18.8936 30.0755 18.5483 29.7637L16.1278 27.5782Z"
-                fill="#888888"
+    <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto px-4 md:px-8 py-12 gap-8">
+      <iframe
+        src="https://www.art19.com/shows/no-lie/embed?playlist_type=playlist"
+        style={{
+          width: "100%",
+          height: "380px",
+          border: "0 none",
+          borderRadius: "25px",
+          margin: "25px",
+          marginBottom: "0px",
+        }}
+        scrolling="no"
+        sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+      ></iframe>
+      <div className="flex flex-col items-center mt-4">
+        <span className="text-lg font-semibold mb-2">Also available on</span>
+        <div className="flex flex-row gap-6">
+          {/* Spotify */}
+          <a
+            href="https://open.spotify.com/show/0066rKCBIycIMI4os6Ec5V"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Spotify"
+          >
+            <span className="inline-block w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28">
+              <SpotifyLogo className="w-full h-full" />
+            </span>
+          </a>
+          {/* Apple Music */}
+          <a
+            href="https://podcasts.apple.com/us/podcast/no-lie-with-brian-tyler-cohen/id1515399733"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Apple Music"
+          >
+            <span className="inline-block w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28">
+              <AppleMusicLogo className="w-full h-full" />
+            </span>
+          </a>
+          {/* YouTube */}
+          <a
+            href="https://www.youtube.com/playlist?list=PLOMpnzRkbFsjUgBe1d5g6d5RuKpDWeBtq"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <span className="inline-block w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28">
+              <Image
+                src="/youtube.png"
+                alt="YouTube"
+                width={112}
+                height={112}
+                className="w-full h-full object-contain"
               />
-            </svg>
-          </div>
+            </span>
+          </a>
+          {/* Amazon Music */}
+          <a
+            href="https://music.amazon.com/podcasts/d366c4f6-bfc6-448e-93e8-506d1e3b1daa/no-lie-with-brian-tyler-cohen"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Amazon Music"
+          >
+            <span className="inline-block w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28">
+              <Image
+                src="/amazon-music.png"
+                alt="Amazon Music"
+                width={112}
+                height={112}
+                className="w-full h-full object-contain"
+              />
+            </span>
+          </a>
         </div>
       </div>
     </div>

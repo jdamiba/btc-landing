@@ -1,6 +1,6 @@
 export default function SignUp() {
   return (
-    <div className="flex flex-col pt-[0px] mt-[75px] border-t-5 ">
+    <div className="flex flex-col pt-[0px] mt-[75px] border-t-5 px-4 md:px-8">
       <h1 className="text-[67px]">
         <b>SIGN UP</b>
       </h1>
