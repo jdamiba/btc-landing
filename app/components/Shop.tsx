@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function Shop() {
   return (
-    <div className="m-auto pt-[75px]">
+    <div className="pt-[75px] border-t-5 px-4 md:px-8">
+      <h1 className="text-[67px]">
+        <b>SHOP</b>
+      </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4">
         <div className="bg-gray-100 p-2 sm:p-4 rounded-lg flex items-center justify-center">
           <Image

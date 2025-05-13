@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HomeFeatureReverse() {
   return (
-    <div className="flex pt-[50px] flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto px-4 md:px-8 py-12 gap-8">
+    <div className="flex pt-[50px] border-t-5 flex-col md:flex-row items-center justify-between w-full mx-auto px-4 md:px-8 py-12 gap-8">
       {/* Image on left for desktop, below text on mobile */}
       <div className="w-full md:w-1/2 flex flex-col justify-center order-1 md:order-2 text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
