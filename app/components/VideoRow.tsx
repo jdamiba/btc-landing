@@ -1,6 +1,17 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function VideoRow() {
+  const [videoId, setVideoId] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch("/api/latest-youtube-video")
+      .then((res) => res.json())
+      .then((data) => setVideoId(data.videoId));
+  }, []);
+
   return (
     <div className="flex flex-col px-4 md:px-8">
       <div className="flex flex-col w-full mx-auto border-t-5 pt-[25px] pb-[100px] mt-[50px] px-4 md:px-8">
@@ -41,14 +52,16 @@ export default function VideoRow() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row w-full gap-y-8 md:gap-x-8">
-          <iframe
-            className="rounded-[25px] w-full aspect-video mb-4 md:mb-0"
-            src="https://www.youtube.com/embed/rQ5_WhB27Ic?si=6uesbyIe6tWUcQSO&amp;controls=0"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
+          {videoId && (
+            <iframe
+              className="rounded-[25px] w-full aspect-video mb-4 md:mb-0"
+              src={`https://www.youtube.com/embed/${videoId}`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          )}
         </div>
         <div className="flex flex-row mt-[55px] text-[#888]">
           <Link href="https://www.youtube.com/briantylercohen" target="_blank">

@@ -25,7 +25,7 @@ export default function Podcast() {
         ></iframe>
         <div className="flex flex-col items-center mt-4">
           <span className="text-lg font-semibold mb-2">Also available on</span>
-          <div className="flex flex-row gap-6">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-6 items-center">
             {/* Spotify */}
             <a
               href="https://open.spotify.com/show/0066rKCBIycIMI4os6Ec5V"
@@ -33,7 +33,7 @@ export default function Podcast() {
               rel="noopener noreferrer"
               aria-label="Spotify"
             >
-              <span className="inline-block w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28">
+              <span className="inline-block w-50 h-50 p-2 rounded-xl transition-transform hover:scale-105">
                 <SpotifyLogo className="w-full h-full" />
               </span>
             </a>
@@ -44,7 +44,7 @@ export default function Podcast() {
               rel="noopener noreferrer"
               aria-label="Apple Music"
             >
-              <span className="inline-block w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28">
+              <span className="inline-block w-50 h-50 p-2 rounded-xl transition-transform hover:scale-105">
                 <AppleMusicLogo className="w-full h-full" />
               </span>
             </a>
@@ -55,7 +55,7 @@ export default function Podcast() {
               rel="noopener noreferrer"
               aria-label="YouTube"
             >
-              <span className="inline-block w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28">
+              <span className="inline-block w-50 h-50 p-2 rounded-xl transition-transform hover:scale-105">
                 <Image
                   src="/youtube.png"
                   alt="YouTube"
@@ -72,7 +72,7 @@ export default function Podcast() {
               rel="noopener noreferrer"
               aria-label="Amazon Music"
             >
-              <span className="inline-block w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28">
+              <span className="inline-block w-50 h-50 p-2 rounded-xl transition-transform hover:scale-105">
                 <Image
                   src="/amazon-music.png"
                   alt="Amazon Music"

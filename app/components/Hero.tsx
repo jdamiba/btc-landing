@@ -1,44 +1,30 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <div className="flex flex-col">
       <div className="m-auto pt-[100px] w-full flex justify-center">
-        <iframe
-          className="w-full max-w-xs aspect-video md:w-[560px] md:h-[315px]"
-          src="https://www.youtube.com/embed/rQ5_WhB27Ic?si=6uesbyIe6tWUcQSO&amp;controls=0"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+        <Image
+          src="/patreon.png"
+          alt="Patreon"
+          width={800}
+          height={800}
+          className="object-contain rounded-lg shadow-lg"
+        />
       </div>
-      <div className="m-auto pt-[50px] max-w-[50%] max-h-[50%]">
-        <svg
-          width="64px"
-          height="43px"
-          viewBox="0 0 64 43"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M0 0V43H64V0H0Z" fill="black" />
-        </svg>
-      </div>
+
       <div className="m-auto">
         <p className="text-3xl max-w-[50%] py-[44px] text-center m-auto">
-          <b>Brian Tyler Cohen</b> is one of the most viewed independent
-          progressive political hosts on YouTube. Lorem ipsum dolor sit amet,
-          consectetur adipiscing.
+          Brian Tyler Cohen is one of the most viewed political commentators
+          online, with more than 10 million subscribers across all platforms.
+          He's spent the better part of a decade giving an honest, concise, and
+          entertaining assessment of our politics to audiences around the world.
+          His show has become a destination for political figures, journalists,
+          and even presidents, amassing billions of views. Brian has dedicated
+          his life to building up progressive media and making politics
+          accessible to as many people as possible. Thanks for supporting
+          independent media.
         </p>
-      </div>
-      <div className="m-auto">
-        <svg
-          width="64"
-          height="43"
-          viewBox="0 0 64 43"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M0 0V43H64V0H0Z" fill="black" />
-        </svg>
       </div>
     </div>
   );
