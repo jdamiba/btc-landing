@@ -1,11 +1,7 @@
 import Hero from "./components/Hero";
 import VideoRow from "./components/VideoRow";
 import Podcast from "./components/Podcast";
-import Shop from "./components/Shop";
-import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
-import HomeFeature from "./components/HomeFeature";
-import HomeFeatureReverse from "./components/HomeFeatureReverse";
 import ContactForm from "./components/ContactForm";
 
 export default function Home() {

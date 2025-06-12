@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Header() {
@@ -35,9 +36,9 @@ export default function Header() {
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full md:w-auto">
           {/* Navigation Links */}
           <nav className="flex flex-col md:flex-row gap-2 md:gap-6 text-base md:text-lg font-medium w-full md:w-auto items-center">
-            <a href="/" className="hover:text-blue-600 transition">
+            <Link href="/" className="hover:text-blue-600 transition">
               Home
-            </a>
+            </Link>
             <a
               href="https://www.youtube.com/briantylercohen"
               target="_blank"
