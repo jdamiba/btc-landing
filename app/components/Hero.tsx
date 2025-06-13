@@ -14,7 +14,7 @@ export default function Hero() {
       </div>
 
       <div className="m-auto">
-        <p className="text-3xl max-w-[50%] py-[44px] text-center m-auto">
+        <p className="text-3xl max-w-[75%] py-[44px] text-center m-auto">
           Brian Tyler Cohen is one of the most viewed political commentators
           online, with more than 10 million subscribers across all platforms.
           He&apos;s spent the better part of a decade giving an honest, concise,

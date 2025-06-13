@@ -1,12 +1,15 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="w-full bg-white border-b border-gray-200">
-      <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto w-full px-4 md:px-8 py-2 md:py-4 gap-4 md:gap-0">
+      <div className="relative flex items-center justify-between max-w-7xl mx-auto w-full px-4 md:px-8 py-2 md:py-4">
         {/* Logo Section */}
-        <div className="flex items-center mb-2 md:mb-0">
+        <div className="flex items-center">
           {/* Placeholder for SVG Logo */}
           <div className="flex items-center justify-center bg-gray-100 rounded">
             <svg
@@ -32,38 +35,86 @@ export default function Header() {
             </svg>
           </div>
         </div>
-        {/* Right Side: Nav Links and Social Icons */}
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full md:w-auto">
-          {/* Navigation Links */}
-          <nav className="flex flex-col md:flex-row gap-2 md:gap-6 text-base md:text-lg font-medium w-full md:w-auto items-center">
-            <Link href="/" className="hover:text-blue-600 transition">
-              Home
-            </Link>
-            <a
-              href="https://www.youtube.com/briantylercohen"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 transition"
-            >
-              YouTube
-            </a>
-            <a
-              href="https://art19.com/shows/no-lie"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 transition"
-            >
-              Podcast
-            </a>
-            <a
-              href="https://plus.briantylercohen.com/subscribe"
-              className="hover:text-blue-600 transition"
-            >
-              Sign Up
-            </a>
-          </nav>
-        </div>
+        {/* Hamburger for mobile */}
+        <button
+          className="md:hidden flex items-center justify-center p-2 ml-auto"
+          aria-label="Open menu"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect y="7" width="32" height="3" rx="1.5" fill="#222" />
+            <rect y="15" width="32" height="3" rx="1.5" fill="#222" />
+            <rect y="23" width="32" height="3" rx="1.5" fill="#222" />
+          </svg>
+        </button>
+        {/* Navigation Links */}
+        <nav
+          className={`${
+            menuOpen
+              ? "flex flex-col absolute top-full left-0 w-full bg-white border-b border-gray-200 z-50 shadow-xl animate-slideDown md:static md:flex-row md:w-auto md:bg-transparent md:border-0 md:shadow-none"
+              : "hidden md:flex md:flex-row md:w-auto"
+          } gap-2 md:gap-6 text-base md:text-lg font-medium items-center transition-all duration-200`}
+        >
+          {/* Close button for mobile menu */}
+          <button
+            className="self-end md:hidden p-2 mr-2 mt-2 text-2xl text-gray-500 hover:text-black focus:outline-none"
+            aria-label="Close menu"
+            onClick={() => setMenuOpen(false)}
+          >
+            &times;
+          </button>
+          <Link
+            href="/"
+            className="hover:text-blue-600 transition px-4 py-3 rounded-md w-full text-left md:w-auto md:text-center md:p-0 md:rounded-none"
+          >
+            Home
+          </Link>
+          <a
+            href="https://www.youtube.com/briantylercohen"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 transition px-4 py-3 rounded-md w-full text-left md:w-auto md:text-center md:p-0 md:rounded-none"
+          >
+            YouTube
+          </a>
+          <a
+            href="https://art19.com/shows/no-lie"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 transition px-4 py-3 rounded-md w-full text-left md:w-auto md:text-center md:p-0 md:rounded-none"
+          >
+            Podcast
+          </a>
+          <a
+            href="https://plus.briantylercohen.com/subscribe"
+            className="hover:text-blue-600 transition px-4 py-3 rounded-md w-full text-left md:w-auto md:text-center md:p-0 md:rounded-none"
+          >
+            Sign Up
+          </a>
+        </nav>
       </div>
+      {/* Slide down animation for mobile menu */}
+      <style jsx>{`
+        @keyframes slideDown {
+          0% {
+            opacity: 0;
+            transform: translateY(-16px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-slideDown {
+          animation: slideDown 0.25s ease;
+        }
+      `}</style>
     </header>
   );
 }
