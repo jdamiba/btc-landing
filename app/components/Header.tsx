@@ -92,6 +92,12 @@ export default function Header() {
             Podcast
           </a>
           <a
+            href="#socials"
+            className="hover:text-blue-600 transition px-4 py-3 rounded-md w-full text-left md:w-auto md:text-center md:p-0 md:rounded-none"
+          >
+            Socials
+          </a>
+          <a
             href="https://plus.briantylercohen.com/subscribe"
             className="hover:text-blue-600 transition px-4 py-3 rounded-md w-full text-left md:w-auto md:text-center md:p-0 md:rounded-none"
           >

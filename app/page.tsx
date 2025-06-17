@@ -3,6 +3,7 @@ import VideoRow from "./components/VideoRow";
 import Podcast from "./components/Podcast";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
+import Socials from "./components/Socials";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <VideoRow />
         <Podcast />
+        <Socials />
         <ContactForm />
       </div>
       <Footer />
