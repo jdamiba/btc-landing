@@ -20,7 +20,7 @@ const socials = [
   },
   {
     name: "YouTube (Headlines)",
-    href: "https://www.youtube.com/@briantylercohenheadlines",
+    href: "https://www.youtube.com/@briantylercohennews",
     icon: (
       <svg
         width="56"
@@ -169,7 +169,7 @@ const socials = [
   },
   {
     name: "Discord",
-    href: "https://discord.gg/briantylercohen",
+    href: "https://discord.com/invite/DmP4Krjzwa",
     icon: (
       <svg
         width="56"
