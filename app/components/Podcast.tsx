@@ -1,8 +1,4 @@
 import Image from "next/image";
-import SpotifyLogo from "./icons/SpotifyLogo";
-import AppleMusicLogo from "./icons/AppleMusicLogo";
-import AmazonMusicLogo from "./icons/AmazonMusicLogo";
-// import YouTubeLogo from "./icons/YouTubeLogo";
 
 export default function Podcast() {
   return (
@@ -43,27 +39,34 @@ export default function Podcast() {
         </div>
         <iframe
           src="https://www.art19.com/shows/no-lie/embed?playlist_type=playlist"
-          style={{
-            width: "100%",
-            height: "380px",
-            border: "0 none",
-            borderRadius: "25px",
-          }}
+          className="w-full mx-auto rounded-2xl border-0"
+          style={{ height: "380px" }}
           scrolling="no"
           sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
         ></iframe>
         <div className="flex flex-col items-center mt-4">
           <span className="text-lg font-semibold mb-2">Also available on</span>
-          <div className="flex flex-col md:flex-row gap-2 items-center">
+          <div className="flex flex-row flex-wrap gap-6 justify-center">
             {/* Spotify */}
             <a
               href="https://open.spotify.com/show/0066rKCBIycIMI4os6Ec5V"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex flex-col items-center group"
               aria-label="Spotify"
             >
-              <span className="inline-block w-32 h-32 md:w-24 md:h-24 lg:w-48 lg:h-48 p-2 rounded-xl transition-transform hover:scale-105 max-h-[100px] md:max-h-none">
-                <SpotifyLogo className="w-full h-full" />
+              <span className="rounded-lg shadow-md bg-white p-6 group-hover:scale-110 transition-transform border border-gray-200">
+                <Image
+                  src="/spotify.png"
+                  alt="Spotify"
+                  width={56}
+                  height={56}
+                  className="object-contain rounded-lg w-14 h-14"
+                  priority={false}
+                />
+              </span>
+              <span className="mt-2 text-base font-medium group-hover:text-blue-600 transition-colors text-center">
+                Spotify
               </span>
             </a>
             {/* Apple Music */}
@@ -71,10 +74,21 @@ export default function Podcast() {
               href="https://podcasts.apple.com/us/podcast/no-lie-with-brian-tyler-cohen/id1515399733"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex flex-col items-center group"
               aria-label="Apple Music"
             >
-              <span className="inline-block w-32 h-32 md:w-24 md:h-24 lg:w-48 lg:h-48 p-2 rounded-xl transition-transform hover:scale-105 max-h-[100px] md:max-h-none">
-                <AppleMusicLogo className="w-full h-full" />
+              <span className="rounded-lg shadow-md bg-white p-6 group-hover:scale-110 transition-transform border border-gray-200">
+                <Image
+                  src="/applemusic.svg"
+                  alt="Apple Music"
+                  width={56}
+                  height={56}
+                  className="object-contain rounded-lg w-14 h-14"
+                  priority={false}
+                />
+              </span>
+              <span className="mt-2 text-base font-medium group-hover:text-blue-600 transition-colors text-center">
+                Apple Music
               </span>
             </a>
             {/* YouTube */}
@@ -82,16 +96,21 @@ export default function Podcast() {
               href="https://www.youtube.com/playlist?list=PLOMpnzRkbFsjUgBe1d5g6d5RuKpDWeBtq"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex flex-col items-center group"
               aria-label="YouTube"
             >
-              <span className="inline-block w-32 h-32 md:w-24 md:h-24 lg:w-48 lg:h-48 p-2 rounded-xl transition-transform hover:scale-105 max-h-[100px] md:max-h-none">
+              <span className="rounded-lg shadow-md bg-white p-6 group-hover:scale-110 transition-transform border border-gray-200">
                 <Image
                   src="/youtube.png"
                   alt="YouTube"
-                  width={112}
-                  height={112}
-                  className="w-full h-full object-contain"
+                  width={56}
+                  height={56}
+                  className="object-contain rounded-lg w-14 h-14"
+                  priority={false}
                 />
+              </span>
+              <span className="mt-2 text-base font-medium group-hover:text-blue-600 transition-colors text-center">
+                YouTube
               </span>
             </a>
             {/* Amazon Music */}
@@ -99,10 +118,21 @@ export default function Podcast() {
               href="https://music.amazon.com/podcasts/d366c4f6-bfc6-448e-93e8-506d1e3b1daa/no-lie-with-brian-tyler-cohen"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex flex-col items-center group"
               aria-label="Amazon Music"
             >
-              <span className="inline-block w-32 h-32 md:w-24 md:h-24 lg:w-48 lg:h-48 p-2 rounded-xl transition-transform hover:scale-105 max-h-[100px] md:max-h-none">
-                <AmazonMusicLogo className="w-full h-full" />
+              <span className="rounded-lg shadow-md bg-white p-6 group-hover:scale-110 transition-transform border border-gray-200">
+                <Image
+                  src="/amazonmusic.svg"
+                  alt="Amazon Music"
+                  width={56}
+                  height={56}
+                  className="object-contain rounded-lg w-14 h-14"
+                  priority={false}
+                />
+              </span>
+              <span className="mt-2 text-base font-medium group-hover:text-blue-600 transition-colors text-center">
+                Amazon Music
               </span>
             </a>
           </div>

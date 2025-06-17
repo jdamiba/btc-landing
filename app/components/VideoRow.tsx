@@ -51,10 +51,10 @@ export default function VideoRow() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row w-[60%] m-auto gap-y-8 md:gap-x-8">
+        <div className="flex flex-col md:flex-row gap-y-8 md:gap-x-8">
           {videoId && (
             <iframe
-              className="rounded-[25px] w-full aspect-video mb-4 md:mb-0"
+              className="rounded-[25px] w-full max-w-[700px] m-auto aspect-video mb-4 md:mb-0"
               src={`https://www.youtube.com/embed/${videoId}`}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
