@@ -19,7 +19,7 @@ const socials = [
     ),
   },
   {
-    name: "YouTube (Headlines)",
+    name: "YouTube (straight headlines)",
     href: "https://www.youtube.com/@briantylercohennews",
     icon: (
       <svg
@@ -140,20 +140,6 @@ const socials = [
     ),
   },
   {
-    name: "Podcast",
-    href: "https://art19.com/shows/no-lie",
-    icon: (
-      <Image
-        src="/nolie.svg"
-        alt="Podcast"
-        width={56}
-        height={56}
-        className="object-contain rounded-lg w-14 h-14"
-        priority={false}
-      />
-    ),
-  },
-  {
     name: "Newsletter/Substack",
     href: "https://briantylercohen.substack.com/",
     icon: (
@@ -244,7 +230,7 @@ export default function Socials() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row flex-wrap gap-6 justify-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center w-full max-w-6xl mx-auto">
         {socials.map((social) => (
           <a
             key={social.name}

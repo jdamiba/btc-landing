@@ -221,6 +221,7 @@ export default function ContactForm() {
               <option value="" disabled>
                 Select Inquiry Type
               </option>
+              <option value="Billing Issue">Billing Issue</option>
               <option value="Speaking Engagements">Speaking Engagements</option>
               <option value="Merch Order Questions">
                 Merch Order Questions
