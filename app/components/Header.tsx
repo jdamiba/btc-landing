@@ -84,6 +84,12 @@ export default function Header() {
             YouTube
           </a>
           <a
+            href="#merch"
+            className="hover:text-blue-600 transition px-4 py-3 rounded-md w-full text-left md:w-auto md:text-center md:p-0 md:rounded-none"
+          >
+            Merch
+          </a>
+          <a
             href="https://art19.com/shows/no-lie"
             target="_blank"
             rel="noopener noreferrer"
