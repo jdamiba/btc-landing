@@ -14,7 +14,7 @@ export default function VideoRow() {
 
   return (
     <div className="flex flex-col px-4 md:px-8">
-      <div className="flex flex-col w-full mx-auto border-t-5 pt-[25px] pb-[100px] mt-[50px] px-4 md:px-8">
+      <div className="flex flex-col w-full mx-auto border-t-5 pt-[25px] mt-[50px] px-4 md:px-8">
         <div className="flex flex-row flex-wrap max-w-[450px] pb-[75px]">
           <div className="mr-[20px]">
             <svg

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Shop() {
   return (
     <div id="merch" className="flex flex-col px-4 md:px-8">
-      <div className="flex flex-col w-full mx-auto border-t-5 pt-[25px] pb-[100px] mt-[50px] px-4 md:px-8">
+      <div className="flex flex-col w-full mx-auto border-t-5 pt-[25px] pb-[50px] mt-[50px] px-4 md:px-8">
         <h1 className="text-[67px]">
           <b>MERCH</b>
         </h1>
