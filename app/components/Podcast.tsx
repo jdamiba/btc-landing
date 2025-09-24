@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Podcast() {
   return (
-    <>
-      <div className="flex flex-col w-full mx-auto px-4 md:px-8 py-4 gap-8 border-t-5">
+    <div className="flex flex-col px-4 md:px-8">
+      <div className="flex flex-col w-full mx-auto border-t-5 pt-[25px] pb-[50px] mt-[50px] px-4 md:px-8">
         <div className="flex flex-row flex-wrap max-w-[450px] pb-[75px]">
           <div className="mr-[20px]">
             <svg
@@ -138,6 +138,6 @@ export default function Podcast() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
