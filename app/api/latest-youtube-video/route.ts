@@ -20,7 +20,7 @@ export async function GET() {
   });
   response.headers.set(
     "Cache-Control",
-    "public, s-maxage=86400, stale-while-revalidate=60"
+    "public, s-maxage=3600, stale-while-revalidate=60"
   );
   return response;
 }
