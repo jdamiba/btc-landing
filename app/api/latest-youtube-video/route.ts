@@ -13,14 +13,9 @@ export async function GET() {
   }
 
   const video = data.items[0];
-  const response = NextResponse.json({
+  return NextResponse.json({
     videoId: video.id.videoId,
     title: video.snippet.title,
     thumbnail: video.snippet.thumbnails.high.url,
   });
-  response.headers.set(
-    "Cache-Control",
-    "public, s-maxage=3600, stale-while-revalidate=60"
-  );
-  return response;
 }
