@@ -8,7 +8,7 @@ export async function POST(req: Request) {
 
   try {
     await resend.emails.send({
-      from: "Website Contact <onboarding@resend.dev>",
+      from: "Website Contact <brian@briantylercohen.com>",
       to: process.env.CONTACT_TO_EMAIL!,
       subject: `New Contact Form Submission from ${name}: ${inquiryType}`,
       replyTo: email,
