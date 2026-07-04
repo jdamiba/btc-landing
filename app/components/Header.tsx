@@ -76,6 +76,14 @@ export default function Header() {
             Home
           </Link>
           <a
+            href="https://www.harpercollins.com/pages/thedayafter"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 transition px-4 py-3 rounded-md w-full text-left md:w-auto md:text-center md:p-0 md:rounded-none"
+          >
+            Book
+          </a>
+          <a
             href="https://www.youtube.com/briantylercohen"
             target="_blank"
             rel="noopener noreferrer"
